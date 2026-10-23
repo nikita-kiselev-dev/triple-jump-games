@@ -24,3 +24,7 @@ Defined in `styles.css`, especially `--bg`, `--surface`, `--stroke`, `--muted`, 
 Validate the landing on narrow phone, intermediate tablet, desktop, keyboard-only and reduced-motion setups. Maintain the incumbent brand while adjusting typography, layout, semantics and polish.
 
 Design criteria drawn from [Impeccable](https://github.com/pbakaus/impeccable), especially `polish`, `typeset`, and `craft-floor`. No Impeccable runtime is required to view or deploy this static site.
+
+## Localization
+
+English HTML remains the progressive-enhancement fallback; Russian translations live in `i18n.js`. Keep headings concise to preserve the mobile layout, translate alternate text and project dialogs, and preserve proper project names. The language switch stays visible at narrow widths. Manual selection persists in local storage; explicit `?lang=...` links take priority.

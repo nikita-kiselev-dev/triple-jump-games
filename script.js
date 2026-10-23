@@ -46,12 +46,12 @@ const navLinks = document.querySelector('.nav-links');
 function closeMenu() {
   navLinks.classList.remove('is-open');
   navToggle.setAttribute('aria-expanded', 'false');
-  navToggle.setAttribute('aria-label', 'Open menu');
+  navToggle.setAttribute('aria-label', TJG_I18N.t('Open menu'));
 }
 navToggle.addEventListener('click', () => {
   const open = navLinks.classList.toggle('is-open');
   navToggle.setAttribute('aria-expanded', String(open));
-  navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  navToggle.setAttribute('aria-label', TJG_I18N.t(open ? 'Close menu' : 'Open menu'));
 });
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
@@ -73,7 +73,7 @@ document.querySelectorAll('.filter').forEach((button) => {
       if (!card.hidden) shown++;
     });
     const count = document.getElementById('filter-count');
-    if (count) count.textContent = `SHOWING ${String(shown).padStart(2, '0')} / ${String(cards.length).padStart(2, '0')}`;
+    if (count) count.textContent = TJG_I18N.formatCount(shown, cards.length);
   });
 });
 
@@ -84,18 +84,33 @@ document.querySelectorAll('[data-project]').forEach(button => {
     const info = PROJECTS[button.dataset.project];
     if (!info) return;
     lastTrigger = button;
-    document.getElementById('dialog-title').textContent = info.title;
-    document.getElementById('dialog-kicker').textContent = info.kicker;
-    document.getElementById('dialog-desc').textContent = info.description;
-    const image = document.getElementById('dialog-img');
-    image.src = info.img;
-    image.alt = info.alt;
+    renderProjectDetails(info);
     modal.showModal();
   });
 });
-function closeDialog() {
-  modal.close();
+function renderProjectDetails(info) {
+  document.getElementById('dialog-title').textContent = TJG_I18N.t(info.title);
+  document.getElementById('dialog-kicker').textContent = TJG_I18N.t(info.kicker);
+  document.getElementById('dialog-desc').textContent = TJG_I18N.t(info.description);
+  const image = document.getElementById('dialog-img');
+  image.src = info.img;
+  image.alt = TJG_I18N.t(info.alt);
 }
+function refreshLocalizedControls() {
+  const isRussian = TJG_I18N.language === 'ru';
+  const options = document.querySelectorAll('.language-option');
+  options[0].setAttribute('aria-label', isRussian ? 'Переключить на английский' : 'Switch to English');
+  options[1].setAttribute('aria-label', isRussian ? 'Переключить на русский' : 'Switch to Russian');
+  const menuIsOpen = navToggle.getAttribute('aria-expanded') === 'true';
+  navToggle.setAttribute('aria-label', TJG_I18N.t(menuIsOpen ? 'Close menu' : 'Open menu'));
+  const cards = [...document.querySelectorAll('.project-card')];
+  const visible = cards.filter(card => !card.hidden).length;
+  const counter = document.getElementById('filter-count');
+  if (counter) counter.textContent = TJG_I18N.formatCount(visible, cards.length);
+  if (modal.open && lastTrigger) renderProjectDetails(PROJECTS[lastTrigger.dataset.project]);
+}
+document.addEventListener('tjg:languagechange', refreshLocalizedControls);
+refreshLocalizedControls();
 modal.addEventListener('close', () => lastTrigger?.focus());
 modal.querySelector('.dialog-close').addEventListener('click', closeDialog);
 modal.addEventListener('click', e => { if (e.target === modal) closeDialog(); });
