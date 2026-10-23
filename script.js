@@ -19,7 +19,7 @@ const PROJECTS = {
   systems: {
     title: 'Gameplay Systems',
     kicker: 'ENGINEERING FOCUS / UNITY · C#',
-    description: 'I enjoy working on the building blocks behind engaging games: core mechanics, reusable gameplay logic, iteration workflows and performance-conscious implementation. This image is illustrative.',
+    description: 'Triple Jump Games focuses on the building blocks behind engaging games: core mechanics, reusable gameplay logic, iteration workflows and performance-conscious implementation. This image is illustrative.',
     img: 'assets/system-blueprint.svg',
     alt: 'Illustrative gameplay-systems diagram'
   }

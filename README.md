@@ -1,24 +1,26 @@
-# Nikita Kiselev — Unity Developer
+# Triple Jump Games — Unity game development
 
-Персональное портфолио Unity-разработчика. Адаптивный сайт без сборки на HTML, CSS и JavaScript.
+Official landing page for **Triple Jump Games**, built with HTML, CSS and vanilla JavaScript.
 
-## Сайт
+## Live website
 
-Репозиторий: https://github.com/nikita-kiselev-dev/triple-jump.github.io
+https://nikita-kiselev-dev.github.io/triple-jump-games/
 
-После включения GitHub Pages (**Settings → Pages → Deploy from a branch → main → /(root)**) сайт будет доступен по адресу:
+## Repository
 
-https://nikita-kiselev-dev.github.io/triple-jump.github.io/
+https://github.com/nikita-kiselev-dev/triple-jump-games
 
-**Важно:** `triple-jump.github.io` — имя репозитория, а не домен, принадлежащий владельцу `nikita-kiselev-dev`. Для использования `https://triple-jump.github.io/` необходим контроль домена и соответствующая настройка DNS и GitHub Pages; простого переименования репозитория недостаточно.
+## Hosting
 
-## Редактирование
+GitHub Pages → Deploy from a branch → `main` → `/(root)`.
 
-- `index.html` — тексты, карточки и метаданные.
-- `styles.css` — сетка, оформление и анимации.
-- `script.js` — фильтрация проектов, модальные окна, меню, эффекты.
-- `assets/` — иллюстрации и обложка Open Graph.
+## Editing
 
-Карточки `Toaster Market`, `Arcade Lab`, `Gameplay Systems` содержат **демонстрационные** иллюстрации и описания, их необходимо заменить реальными проектами перед использованием в качестве фактического портфолио.
+- `index.html`: page content, SEO and social metadata
+- `styles.css`: responsive design and visual effects
+- `script.js`: project cards, filters and animations
+- `assets/`: illustrative project artwork, icon and sharing image
 
-Запуск локально: `python3 -m http.server 8000`. Зависимостей и сборки нет.
+The website contains clearly labeled project placeholders; replace them with real screenshots, descriptions and URLs before using them as released-game examples.
+
+The GitHub account name `nikita-kiselev-dev` is used only for technical URLs, not on-page branding.
