@@ -20,6 +20,7 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="site-shell" id="top">
     <header class="site-header">
@@ -65,9 +66,13 @@
                 <span class="preview-bar-right">INTERACTIVE WORLDS <span>✳</span></span>
               </div>
               <div class="hero-scene">
-                <img src="assets/toaster-market.svg" alt="Illustrative concept artwork of a playful low-poly supermarket environment filled with toasters" width="1200" height="740">
+                <img src="assets/toaster-market.svg" alt="Illustrative concept artwork of a playful low-poly supermarket environment filled with toasters" width="1200" height="740" fetchpriority="high" decoding="async">
                 <div class="preview-corner preview-corner-left">CONCEPT ART / 001</div>
                 <div class="preview-corner preview-corner-right">MADE WITH <span>UNITY</span></div>
+                <div class="preview-story" aria-hidden="true">
+                  <div class="preview-story-main"><span class="preview-story-label">01 / FEATURED CONCEPT</span><strong>Small idea. Big playground.</strong></div>
+                  <span class="preview-story-aside">TOASTER MARKET <span>✳</span> UNITY / 3D</span>
+                </div>
               </div>
             </div>
             <div class="floating-tag tag-left" aria-hidden="true"><span class="tag-icon">✦</span><span>Ideas → Play</span></div>
@@ -100,25 +105,26 @@
           <button type="button" class="filter active" data-filter="all" aria-pressed="true">All work <span>03</span></button>
           <button type="button" class="filter" data-filter="games" aria-pressed="false">Games <span>02</span></button>
           <button type="button" class="filter" data-filter="systems" aria-pressed="false">Systems <span>01</span></button>
+          <span class="filter-count" id="filter-count" role="status" aria-live="polite" aria-atomic="true">SHOWING 03 / 03</span>
         </div>
         <div class="project-grid">
           <article class="project-card project-feature reveal" data-category="games">
             <button class="project-open" type="button" data-project="toaster" aria-label="View Toaster Market concept details">
-              <span class="project-image project-image-feature"><img src="assets/toaster-market.svg" alt="Colorful supermarket full of stylized toasters, concept illustration" width="1200" height="740" loading="eager"><span class="image-top-label">01 / GAME CONCEPT</span><span class="project-expand" aria-hidden="true">↗</span></span>
+              <span class="project-image project-image-feature"><img src="assets/toaster-market.svg" alt="Colorful supermarket full of stylized toasters, concept illustration" width="1200" height="740" loading="lazy" decoding="async"><span class="image-top-label">01 / GAME CONCEPT</span><span class="project-expand" aria-hidden="true">↗</span></span>
               <span class="project-meta"><span class="project-kicker">CONCEPT STUDY <span class="project-kicker-divider">/</span> UNITY · 3D</span><span class="project-year">2026</span></span>
               <span class="project-info"><span><strong>Toaster Market</strong><small>A bizarre little supermarket where every item is a toaster.</small></span><span class="project-arrow" aria-hidden="true">↗</span></span>
             </button>
           </article>
           <article class="project-card reveal" data-category="games">
             <button class="project-open" type="button" data-project="arcade" aria-label="View Arcade Lab details">
-              <span class="project-image project-image-small"><img src="assets/arcade-lab.svg" alt="Neon colored abstract arcade environment, illustrative portfolio placeholder" width="900" height="720" loading="eager"><span class="image-top-label">02 / VISUAL EXPLORATION</span><span class="project-expand" aria-hidden="true">↗</span></span>
+              <span class="project-image project-image-small"><img src="assets/arcade-lab.svg" alt="Neon colored abstract arcade environment, illustrative portfolio placeholder" width="900" height="720" loading="lazy" decoding="async"><span class="image-top-label">02 / VISUAL EXPLORATION</span><span class="project-expand" aria-hidden="true">↗</span></span>
               <span class="project-meta"><span class="project-kicker">PLACEHOLDER ART <span class="project-kicker-divider">/</span> GAME DESIGN</span><span class="project-year">2026</span></span>
               <span class="project-info"><span><strong>Arcade Lab</strong><small>A visual placeholder for a future playable project.</small></span><span class="project-arrow" aria-hidden="true">↗</span></span>
             </button>
           </article>
           <article class="project-card reveal" data-category="systems">
             <button class="project-open" type="button" data-project="systems" aria-label="View Gameplay Systems details">
-              <span class="project-image project-image-small"><img src="assets/system-blueprint.svg" alt="Stylized interface showing interconnected gameplay systems" width="900" height="720" loading="eager"><span class="image-top-label">03 / ENGINEERING FOCUS</span><span class="project-expand" aria-hidden="true">↗</span></span>
+              <span class="project-image project-image-small"><img src="assets/system-blueprint.svg" alt="Stylized interface showing interconnected gameplay systems" width="900" height="720" loading="lazy" decoding="async"><span class="image-top-label">03 / ENGINEERING FOCUS</span><span class="project-expand" aria-hidden="true">↗</span></span>
               <span class="project-meta"><span class="project-kicker">ENGINEERING <span class="project-kicker-divider">/</span> UNITY · C#</span><span class="project-year">ONGOING</span></span>
               <span class="project-info"><span><strong>Gameplay Systems</strong><small>Robust foundations for expressive game mechanics.</small></span><span class="project-arrow" aria-hidden="true">↗</span></span>
             </button>

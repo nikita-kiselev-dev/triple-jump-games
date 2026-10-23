@@ -1,5 +1,7 @@
 'use strict';
 
+document.documentElement.classList.add('js');
+
 // Edit these entries when you replace the demo concepts with real projects.
 const PROJECTS = {
   toaster: {
@@ -64,9 +66,14 @@ document.querySelectorAll('.filter').forEach((button) => {
       b.setAttribute('aria-pressed', String(b === button));
     });
     const selection = button.dataset.filter;
-    document.querySelectorAll('.project-card').forEach(card => {
+    let shown = 0;
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
       card.hidden = selection !== 'all' && card.dataset.category !== selection;
+      if (!card.hidden) shown++;
     });
+    const count = document.getElementById('filter-count');
+    if (count) count.textContent = `SHOWING ${String(shown).padStart(2, '0')} / ${String(cards.length).padStart(2, '0')}`;
   });
 });
 
@@ -88,8 +95,8 @@ document.querySelectorAll('[data-project]').forEach(button => {
 });
 function closeDialog() {
   modal.close();
-  lastTrigger?.focus();
 }
+modal.addEventListener('close', () => lastTrigger?.focus());
 modal.querySelector('.dialog-close').addEventListener('click', closeDialog);
 modal.addEventListener('click', e => { if (e.target === modal) closeDialog(); });
 
@@ -107,3 +114,40 @@ if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches && wind
   }, { passive: true });
   area.addEventListener('pointerleave', () => { preview.style.transform = ''; });
 }
+
+
+// Compact navigation and reading progress, updated in one animation frame per scroll.
+const progressBar = document.querySelector('.scroll-progress');
+const siteHeader = document.querySelector('.site-header');
+const trackedSections = [...document.querySelectorAll('main section[id]')];
+const sectionLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+let chromeFramePending = false;
+
+function updatePageChrome() {
+  chromeFramePending = false;
+  const scrollable = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+  const fraction = Math.min(1, Math.max(0, window.scrollY / scrollable));
+  if (progressBar) progressBar.style.transform = `scaleX(${fraction})`;
+  siteHeader?.classList.toggle('is-scrolled', window.scrollY > 24);
+
+  let activeSection = '';
+  for (const section of trackedSections) {
+    if (section.getBoundingClientRect().top < Math.min(190, window.innerHeight * 0.35)) {
+      activeSection = section.id;
+    }
+  }
+  for (const link of sectionLinks) {
+    const active = link.getAttribute('href') === `#${activeSection}`;
+    link.classList.toggle('is-active', active);
+    if (active) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  }
+}
+function schedulePageChrome() {
+  if (chromeFramePending) return;
+  chromeFramePending = true;
+  window.requestAnimationFrame(updatePageChrome);
+}
+window.addEventListener('scroll', schedulePageChrome, { passive: true });
+window.addEventListener('resize', schedulePageChrome);
+schedulePageChrome();
