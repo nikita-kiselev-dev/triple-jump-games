@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720"><defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#221c4e"/><stop offset=".55" stop-color="#483e93"/><stop offset="1" stop-color="#8b4e92"/></linearGradient><linearGradient id="ground" x2="0" y2="1"><stop stop-color="#402f85"/><stop offset="1" stop-color="#181a46"/></linearGradient><linearGradient id="pink" x2="0" y2="1"><stop stop-color="#ffc7c6"/><stop offset="1" stop-color="#f477a0"/></linearGradient><radialGradient id="halo"><stop stop-color="#fa95d1" stop-opacity=".5"/><stop offset="1" stop-color="#ff89a5" stop-opacity="0"/></radialGradient><filter id="soft"><feGaussianBlur stdDeviation="35"/></filter></defs><rect width="900" height="720" fill="url(#bg)"/><circle cx="446" cy="260" r="290" fill="url(#halo)"/><circle cx="704" cy="102" r="100" fill="#c2a9fa" opacity=".16" filter="url(#soft)"/>
+<g fill="none" stroke="#d4addc" opacity=".13"><path d="M0 70 Q450 20 900 70"/><path d="M0 126 Q450 76 900 126"/><path d="M0 182 Q450 132 900 182"/><path d="M0 238 Q450 188 900 238"/><path d="M0 294 Q450 244 900 294"/><path d="M0 350 Q450 300 900 350"/><path d="M0 406 Q450 356 900 406"/><path d="M0 462 Q450 412 900 462"/><path d="M0 518 Q450 468 900 518"/></g><path d="M0 485 310 390 609 385 900 480V720H0Z" fill="url(#ground)"/>
+<path d="M45 716 304 449 592 448 851 716" fill="#a47de1" opacity=".20"/>
+<g stroke="#bfa1ed" stroke-opacity=".14" stroke-width="2"><path d="M450 390 L-330 720"/><path d="M450 390 L-200 720"/><path d="M450 390 L-70 720"/><path d="M450 390 L60 720"/><path d="M450 390 L190 720"/><path d="M450 390 L320 720"/><path d="M450 390 L450 720"/><path d="M450 390 L580 720"/><path d="M450 390 L710 720"/><path d="M450 390 L840 720"/><path d="M450 390 L970 720"/><path d="M450 390 L1100 720"/><path d="M450 390 L1230 720"/><path d="M0 505H900"/><path d="M0 570H900"/><path d="M0 650H900"/></g>
+<!-- floating arcade platform -->
+<ellipse cx="457" cy="559" rx="250" ry="58" fill="#160e3d" opacity=".4"/>
+<path d="M210 399 453 313 697 400 453 505Z" fill="#8b73dd" stroke="#c4b2fc" stroke-width="5"/>
+<path d="M210 399 453 505V557L210 451Z" fill="#6654b8"/>
+<path d="M453 505 697 400V452L453 557Z" fill="#5141a4"/>
+<path d="M253 398 452 327 653 399 455 488Z" fill="#c8bbf4"/>
+<path d="M291 395 453 341 611 395 453 462Z" fill="#7554c3"/>
+<ellipse cx="456" cy="395" rx="92" ry="32" fill="#27235d" opacity=".4"/>
+<!-- portal concentric rings -->
+<ellipse cx="455" cy="255" rx="172" ry="154" fill="#382460" stroke="#ffb8dc" stroke-width="21"/>
+<ellipse cx="455" cy="255" rx="136" ry="120" fill="#58429f" stroke="#ff82b2" stroke-width="10"/>
+<ellipse cx="455" cy="255" rx="103" ry="93" fill="#352e8e" stroke="#d0a4fa" stroke-width="3"/>
+<ellipse cx="455" cy="255" rx="77" ry="72" fill="#c68bc9" opacity=".5"/>
+<path d="M425 255h60M455 225v60" stroke="#ffe4ed" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+<!-- pillar sides -->
+<path d="M265 295 307 285 320 450 281 468Z" fill="#6d50a2"/><path d="M265 295 283 278 307 285 287 303Z" fill="#e59ed8"/><path d="M605 284 643 295 629 468 591 450Z" fill="#7455ae"/><path d="M605 284 623 275 643 295 620 302Z" fill="#f1a7dc"/>
+<!-- stepping platforms -->
+<path d="M120 538 223 508 322 541 220 580Z" fill="#ffb9db"/><path d="M120 538 220 580V605L120 562Z" fill="#b571ce"/><path d="M220 580 322 541V565L220 605Z" fill="#9459b5"/>
+<path d="M604 540 711 506 804 541 700 582Z" fill="#97e0f1"/><path d="M604 540 700 582V605L604 562Z" fill="#4f91b7"/><path d="M700 582 804 541V565L700 605Z" fill="#3977a4"/>
+<!-- hero avatar -->
+<ellipse cx="452" cy="445" rx="44" ry="11" fill="#331854" opacity=".4"/><g transform="translate(411 321)"><rect x="11" y="41" width="58" height="70" rx="22" fill="#ffad9c" stroke="#ffdfd6" stroke-width="5"/><circle cx="40" cy="26" r="28" fill="#ffe2b3"/><path d="M13 16Q40-17 68 17" fill="#4a376c"/><circle cx="32" cy="27" r="3" fill="#543d62"/><circle cx="49" cy="27" r="3" fill="#543d62"/><path d="M32 39Q41 46 49 39" stroke="#c2767f" stroke-width="2" fill="none"/><path d="M12 67-5 91M70 67l20 22" stroke="#ffb59f" stroke-width="13" stroke-linecap="round"/><path d="M26 110l-6 23M55 110l6 23" stroke="#4c4187" stroke-width="13" stroke-linecap="round"/></g>
+<!-- stars --><path d="M110 140V164M98 152H122" stroke="#ffe2f5" stroke-width="2" stroke-linecap="round" opacity=".8"/><path d="M754 144V176M738 160H770" stroke="#ffe2f5" stroke-width="2" stroke-linecap="round" opacity=".8"/><path d="M170 272V288M162 280H178" stroke="#ffe2f5" stroke-width="2" stroke-linecap="round" opacity=".8"/><path d="M796 323V343M786 333H806" stroke="#ffe2f5" stroke-width="2" stroke-linecap="round" opacity=".8"/><path d="M666 62V82M656 72H676" stroke="#ffe2f5" stroke-width="2" stroke-linecap="round" opacity=".8"/><path d="M233 76V96M223 86H243" stroke="#ffe2f5" stroke-width="2" stroke-linecap="round" opacity=".8"/><path d="M735 407V423M727 415H743" stroke="#ffe2f5" stroke-width="2" stroke-linecap="round" opacity=".8"/><g transform="translate(35 34)"><rect width="218" height="52" rx="13" fill="#221b4f" opacity=".85"/><circle cx="28" cy="26" r="11" fill="#ff91b9"/><text x="49" y="22" fill="#ebdaf9" font-family="Arial" font-size="10" font-weight="bold" letter-spacing="1.2">LEVEL 01</text><text x="49" y="41" fill="#fff" font-family="Arial" font-size="17" font-weight="bold">THE PLAYGROUND</text></g>
+<path d="M0 0H900V720H0Z" fill="none" stroke="#b5a0db" stroke-opacity=".07" stroke-width="10"/></svg>
